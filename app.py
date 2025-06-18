@@ -23,7 +23,7 @@ BLOCK_COLORS = {
 
 def get_github_file_content(path):
     try:
-        url = f'https://raw.githubusercontent.com/{repo}/main/{path}'
+        url = f'https://raw.githubusercontent.com/{repo}/outputs/{path}'
         response = requests.get(url)
         response.raise_for_status()  # Raise an error for bad responses
         return response.content
